@@ -1,0 +1,27 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "Web-browser calculator app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Horrorspace/Calculator.git"
+  },
+  "keywords": [
+    "html",
+    "scss",
+    "js",
+    "javascript",
+    "ts",
+    "typescript"
+  ],
+  "author": "eugenii <utkineugeny@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Horrorspace/Calculator/issues"
+  },
+  "homepage": "https://github.com/Horrorspace/Calculator#readme"
+}
