@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/Horrorspace/Calculator/issues"
   },
-  "homepage": "https://github.com/Horrorspace/Calculator#readme"
+  "homepage": "https://github.com/Horrorspace/Calculator#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
 }
