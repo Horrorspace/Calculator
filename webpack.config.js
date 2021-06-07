@@ -30,8 +30,7 @@ module.exports = {
     mode: 'development',
     context: path.resolve(__dirname, 'src'),
     entry: {
-        app: './index.jsx',
-        test: './test.ts'
+        app: './index.ts',
     },
     output: {
         filename: '[name].js',
