@@ -30,7 +30,7 @@ module.exports = {
     mode: 'development',
     context: path.resolve(__dirname, 'src'),
     entry: {
-        app: './index.ts',
+        app: './index.tsx',
     },
     output: {
         filename: '[name].js',
@@ -61,12 +61,12 @@ module.exports = {
     })
     ],
     resolve: {
-        extensions: ['.js', '.json', '.scss', 'sass', '.html'],
+        extensions: ['.ts', '.tsx', '.js', '.json', '.scss', '.sass', '.html'],
         alias: {
             '@SCSS': path.resolve(__dirname, './src/scss'),
-            '@global': path.resolve(__dirname, './src/jsx/global'),
-            '@redux': path.resolve(__dirname, './src/jsx/redux'),
-            '@react': path.resolve(__dirname, './src/jsx/react')
+            '@core': path.resolve(__dirname, './src/typescript/core'),
+            '@redux': path.resolve(__dirname, './src/typescript/redux'),
+            '@react': path.resolve(__dirname, './src/typescript/react')
         }
     },
     module: {
@@ -120,22 +120,20 @@ module.exports = {
                 }
             },
             {
-                test: /\.ts$/,
+                test: /\.(ts)$/,
                 exclude: /node_modules/,
                 use: {
-                loader: "babel-loader",
-                options: {
-                    presets: [
-                        '@babel/preset-env',
-                        '@babel/preset-typescript'
-                    ],
-                    plugins: [
-                        '@babel/plugin-proposal-class-properties'
-                    ]
-                    }
+                    loader: "ts-loader",
+                }
+            },
+            {
+                test: /\.(tsx)$/,
+                exclude: /node_modules/,
+                use: {
+                loader: "ts-loader",
                 }
             }
-        ]
+        ],
     },
     devServer: {
         index: 'index.html',

@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+li {
+  list-style-type: none
+}
+
+.wrap {
+  @include flex-content();
+}
+
+.hidden {
+  display: none;
+}

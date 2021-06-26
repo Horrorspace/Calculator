@@ -1,0 +1,240 @@
+.calculator {
+    @include flex-content();
+    
+    width: 368px;
+    min-height: 600px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .display-wrap {
+    @include flex-content(column, space-between, center);
+    
+    width: 368px;
+    min-height: 140px;
+    background-color: $displayColor;
+  }
+  
+  .result-wrap {
+    @include flex-content(row, flex-end, center);
+    
+    width: 100%;
+  
+    margin: 0;
+    padding: 0;
+    
+    order: 2;
+  
+  }
+  
+  .result {
+    @include flex-content(row, flex-start, center);
+    @include font(#FFFFFF, 42px, 300);
+    
+    margin: 0;
+    padding: 0;
+    padding-right: 20px;
+    padding-bottom: 17px;
+  }
+  
+  .expression-wrap {
+    @include flex-content(row, flex-end, flex-start);
+    
+    width: 100%;
+    
+    margin: 0;
+    padding: 0;
+  
+    order: 1;
+  
+  }
+  
+  .expression {
+    @include flex-content(column, space-between, center);
+    @include font(#D98192, 16px, 300);
+    
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 18px;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: right;
+  
+    
+    &:nth-child(1) {
+      padding-top: 37px;
+    }
+  }
+  
+  .menu-wrap {
+    @include flex-content();
+    
+    width: 368px;
+    height: 460px;
+  }
+  
+  .menu-list {
+    @include flex-content(row, center, center);
+    
+    width: 368px;
+    height: 460px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-item {
+    &:nth-child(1) {order: 17}
+    &:nth-child(2) {order: 13}
+    &:nth-child(3) {order: 14}
+    &:nth-child(4) {order: 15}
+    &:nth-child(5) {order: 9}
+    &:nth-child(6) {order: 10}
+    &:nth-child(7) {order: 11}
+    &:nth-child(8) {order: 5}
+    &:nth-child(9) {order: 6}
+    &:nth-child(10) {order: 7}
+    &:nth-child(11) {order: 16}
+    &:nth-child(12) {order: 12}
+    &:nth-child(13) {order: 8}
+    &:nth-child(14) {order: 4}
+    &:nth-child(15) {order: 18}
+    &:nth-child(16) {order: 1}
+    &:nth-child(17) {order: 2}
+    &:nth-child(18) {order: 3}
+    &:nth-child(19) {order: 19}
+  }
+  
+  .menu-btn {
+    @include flex-content(row, center, center);
+    @include font(#212121, 22px, 500);
+    border: 0;
+    outline: 0;
+    background: linear-gradient(135deg, #FFFFFF, #F4F4F4);
+    
+    width: 92px;
+    height: 92px;
+     
+    &:active {
+      background: linear-gradient(135deg, #CCCCCC, #C5C5C5);
+      outline: 0;
+    }
+  }
+  
+  
+  #equals {
+    background: #E62F89;
+    
+    &:active {
+      background: #A1205F;
+    }
+  }
+  
+  #divide {
+    background: #9156E1;
+    @include font(#FFFFFF, 22px, 500);
+    
+    &:active {
+      background: #6A38AD;
+    }
+  }
+  
+  #multiply {
+    background: #8D52DD;
+    @include font(#FFFFFF, 22px, 500);
+    
+    &:active {
+      background: #6A38AD;
+    }
+  }
+  
+  #subtract {
+    background: #894ED9;
+    @include font(#FFFFFF, 22px, 500);
+    
+    &:active {
+      background: #6A38AD;
+    }
+  }
+  
+  #add {
+    background: #8547D9;
+    @include font(#FFFFFF, 22px, 500);
+    
+    &:active {
+      background: #6A38AD;
+    }
+  }
+  
+  
+  
+  .menu-btn__equals {
+    @include flex-content(row, center, center);
+    @include font(#FFFFFF, 35px, 500);
+    border: 0;
+    outline: 0;
+    
+    width: 184px;
+    height: 92px;
+    
+    order: 50;
+  }
+  
+  
+  @media (max-width: $mobile-breakpoint) {
+  .calculator { 
+    width: 184px;
+    min-height: 300px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .display-wrap {
+    width: 184px;
+    min-height: 80px;
+  }
+  
+  .result {
+    @include font(#FFFFFF, 20px, 300);
+    padding-right: 10px;
+    padding-bottom: 8px;
+  }
+  
+  .expression {
+    @include font(#D98192, 8px, 300);
+    @include flex-content(column, center, center);
+  
+    padding-top: 5px;
+    padding-bottom: 9px;
+    padding-right: 10px;
+    padding-left: 10px;
+  
+  
+    
+    &:nth-child(1) {
+      padding-top: 18px;
+      }
+    }
+    
+    .menu-wrap {
+      width: 184px;
+      height: 230px;
+    }
+  
+    .menu-list {
+      width: 184px;
+      height: 230px;
+    }
+  
+    .menu-btn {
+      @include font(#212121, 11px, 500);
+      width: 46px;
+      height: 46px;
+    }
+    
+    .menu-btn__equals {
+      @include font(#FFFFFF, 18px, 500);
+      width: 92px;
+      height: 46px;
+    }
+  }

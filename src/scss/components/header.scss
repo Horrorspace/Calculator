@@ -1,0 +1,42 @@
+.header {
+    @include flex-content(row, start, center);
+    
+    width: 100%;
+    min-height: 50px;
+  
+    background-color: $navColor;
+  }
+  
+  .navigation {
+    @include flex-content(row, start, center);
+  }
+  
+  .navigation-list {
+    @include flex-content(row, space-between, center);
+  
+      margin: 0;
+      padding: 0;
+  }
+  
+  .navigation-item {
+    @include flex-content();
+    margin: 0;
+  }
+  
+  .navigation-link {
+    @include flex-content(row, center, center);
+    @include font();
+    
+    min-width: 100px;
+    min-height: 50px;
+    
+    padding-right: 10px;
+    padding-left: 10px;
+    
+  
+    vertical-align: middle;
+    
+    &:hover{
+      background-color: $navHoverColor;
+    }
+  }

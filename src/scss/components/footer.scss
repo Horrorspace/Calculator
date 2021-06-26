@@ -1,0 +1,46 @@
+.footer {
+    @include flex-content(row, center, center);
+    
+    width: 100%;
+    background-color: $navColor;
+  }
+  
+  .info-wrap {
+    @include flex-content(column, space-between, center);
+    width: 200px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    min-height: 80px;
+    margin: 0;
+  }
+  
+  .info-text {
+    @include flex-content(row, center, center);
+    @include font();
+    margin: 0;
+  }
+  
+  .info-links-list {
+    @include flex-content(row, space-between, center);
+    width: 150px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .info-links-item {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .info-link {
+    color: #FFFFFF6F;
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    
+    
+    &:hover {
+      color: #FFFFFFFF;
+    }
+    
+  }

@@ -1,0 +1,15 @@
+.app-wrap {
+    @include flex-content(column, center, center);
+    
+    width: 100%;
+    min-height: calc(100vh - 50px);
+    
+    background: linear-gradient(135deg, #9258E1, #FF986A);
+  
+  }
+  
+  .app-wrap__animation {
+    background-size: 200% 200%;
+    animation: lounge 12s infinite;
+    -webkit-animation: lounge 12s infinite;
+  }
